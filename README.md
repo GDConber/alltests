@@ -7,5 +7,5 @@
 |序|名称|链接|注释|
 |:-:|:-|:-:|:-|
 |1|时钟|https://gdconber.github.io/alltests/时钟|按F11进入全屏电脑秒跌价哦~|
-|abc|bcd|cde|
+|2|加载页|https://gdconber.github.io/alltests/加载页|一起看一下午吧_(:з」∠)_|
 |abc|bcd|cde|
