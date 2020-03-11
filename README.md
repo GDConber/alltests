@@ -4,5 +4,5 @@
 
 |序|名称|预览|注释|
 |:-:|:-|:-:|:-|
-|1|时钟|[点击跳转1](https://gdconber.github.io/alltests/时钟 "点击跳转")|F11进入全屏电脑秒~~跌价~~变时钟哦~|
-|2|加载页|https://gdconber.github.io/alltests/加载页|一起看一下午吧_(:з」∠)_|
+|1|时钟|[点击跳转](https://gdconber.github.io/alltests/时钟 "猛戳！！！")|F11进入全屏电脑秒~~跌价~~变时钟哦~|
+|2|加载页|[点击跳转](https://gdconber.github.io/alltests/加载页 "猛戳！！！")|一起看一下午吧_(:з」∠)_|
