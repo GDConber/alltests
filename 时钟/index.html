@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name='keywords' content="web glpla">
+  <meta name='description' content="only for test">
+  <title>icons demo </title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link rel="stylesheet" href="css/base.css">
+  <style>
+    *
+    {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #68a4ff;
+    }
+
+    .clock {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff url(clock.png);
+    background-size: cover;
+    border-radius: 50%;
+    border: 20px solid #fff;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, .1),
+                0 20px 20px rgba(0, 0, 0, .2),
+                0 0 4px rgba(255, 255, 255, 1);
+    }
+
+    .clock::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #848484;
+    border: 2px solid #fff;
+    z-index: 100000;
+    border-radius: 50%;
+    }
+
+    .hour,
+    .min,
+    .sec {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hour {
+      width: 160px;
+      height: 160px;
+    }
+
+    .min {
+      width: 190px;
+      height: 190px;
+    }
+
+    .sec {
+      width: 220px;
+      height: 220px;
+    }
+
+    .hour::before {
+      content: '';
+      width: 8px;
+      height: 80px;
+      background: #848484;
+      border-radius: 6px 6px 0 0;
+      z-index: 9;
+    }
+
+    .min::before {
+      content: '';
+      width: 4px;
+      height: 90px;
+      background: #eee;
+      z-index: 10;
+    }
+
+    .sec::before {
+      content: '';
+      width: 2px;
+      height: 130px;
+      background: #f40;
+      z-index: 11;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='app' class="wrap">
+    <div class="clock">
+      <div class="hour" ref='hh'></div>
+      <div class="min" ref='mm'></div>
+      <div class="sec" ref='ss'></div>
+    </div>
+
+  </div>
+  <script>
+    let app = new Vue({
+      el: '#app',
+      data: {
+        deg: 6
+      },
+      methods: {},
+      watch: {},
+      mounted() {
+        setInterval(() => {
+          let day = new Date();
+          let hr = day.getHours() * 5 * this.deg;
+          let mn = day.getMinutes() * this.deg;
+          let sc = day.getSeconds() * this.deg;
+          this.$refs.hh.style.transform = `rotateZ(${hr+(mn/12)}deg)`;
+          this.$refs.mm.style.transform = `rotateZ(${mn}deg)`;
+          this.$refs.ss.style.transform = `rotateZ(${sc}deg)`;
+        }, 1000)
+      }
+    })
+  </script>
+</body>
+
+</html>
