@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="title">
+        <h1>今天心情怎么样？</h1>
+    </div>
+    
+    <!--创建按钮-->
+    <div class="box">
+        
+        <div class="buttons">
+            
+            <button class="happy-btn">:)</button>
+            <button class="normal-btn">:|</button>
+            <button class="angry-btn">:(</button>
+        </div>
+    
+
+        <div class="smiley">
+            <div class="eyes">
+                <div class="eye"></div>
+                <div class="eye"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
+    </body>
+
+    <script>
+        /*获取元素*/
+        let nBtn = document.querySelector(".normal-btn");
+        let aBtn = document.querySelector(".angry-btn");
+        let hBtn = document.querySelector(".happy-btn");
+        let smiley = document.querySelector(".smiley");
+    
+        /*创建函数*/
+        function click(btn, add, remove1, remove2) {
+            btn.onclick = function () {
+                smiley.classList.add(add);
+                smiley.classList.remove(remove1);
+                smiley.classList.remove(remove2);
+            }
+        }
+    
+        /*调用 js */
+        click(nBtn, "normal", "happy", "angry");
+        click(aBtn, "angry", "happy", "normal");
+        click(hBtn, "happy", "angry", "normal");
+    </script>
+</body>
+</html>
